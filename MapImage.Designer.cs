@@ -38,7 +38,6 @@ namespace MovableMap
 			this.ClientSize = new System.Drawing.Size(420, 420);
 			this.ControlBox = false;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Location = new System.Drawing.Point(2000, 1000);
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "MapImage";

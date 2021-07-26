@@ -19,9 +19,10 @@ namespace MovableMap
 
 		// For Focus
 		[DllImport("user32.dll")]
-		static extern bool SetForegroundWindow(IntPtr hWnd);
-		string targetTitle = "notepad";
-		Process returnProcess = null;
+		private static extern bool SetForegroundWindow(IntPtr hWnd);
+		private string targetTitle = "notepad";
+		private Process returnProcess = null;
+		private int counter = 0;
 
 		public MapImage()
 		{
@@ -71,7 +72,7 @@ namespace MovableMap
 		{
 			fpsTimer = new Timer();
 
-			fpsTimer.Interval = 1000 / 120;
+			fpsTimer.Interval = 1000 / 60;
 			fpsTimer.Enabled = true;
 
 			fpsTimer.Tick += new System.EventHandler(fpsTimer_Tick);
@@ -80,6 +81,15 @@ namespace MovableMap
 		private void fpsTimer_Tick(object sender, System.EventArgs e)
 		{
 			DrawMap();
+
+			// TODO: delete (?)
+			counter += 1;
+			if (counter >= 120)
+			{
+				TopMost = false;
+				TopMost = true;
+				counter = 0;
+			}
 		}
 
 		private void StartTimer()

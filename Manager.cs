@@ -25,7 +25,7 @@ namespace MovableMap
 		{
 			if (!int.TryParse(Settings.Default.posX, out posX))
 			{
-				posX = 2800;
+				posX = 2890;
 			}
 			if (!int.TryParse(Settings.Default.posY, out posY))
 			{
@@ -71,7 +71,7 @@ namespace MovableMap
 
 		private void resetButton_Click(object sender, EventArgs e)
 		{
-			posX = 2800;
+			posX = 2890;
 			posY = 1020;
 			hide = false;
 			ReloadMap();
