@@ -3,4 +3,6 @@ Project the LoL Minimap to another position on the screen (adjustable) to make i
 
 **Might not be allowed by riot (chatted with support)**  
 (because of this also not yet tested in game)  
+
+image doesn't load, maybe problem with dimensions  
 ![example](Double Minimap.png)
